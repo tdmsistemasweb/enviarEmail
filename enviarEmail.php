@@ -28,8 +28,6 @@ if (!function_exists('enviarEmail')) {
     
     function enviarEmail($mensagem, $assunto, $prioridade, $de, $responderA, $para, $cc, $bcc, $tipo){
         
-        //Validacao dos campos que não podem estar em branco
-        
         //Validacao dos email usando a funcao nativa nativa filter_var()
         if(!filter_var($de, FILTER_VALIDATE_EMAIL) && !filter_var($para, FILTER_VALIDATE_EMAIL)){
             return FALSE;
